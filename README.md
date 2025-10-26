@@ -40,3 +40,6 @@ This playful metaphor helps kids understand sodium limits in a tangible way — 
    ```bash
    git clone https://github.com/yourusername/sodium-sidekick.git
    cd sodium-sidekick
+
+## Screenshots
+![image](./public/Screenshot%202025-10-26%20at%204.39.45 PM.png)
