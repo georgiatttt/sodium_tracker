@@ -59,8 +59,8 @@ export default function App() {
 
   return (
     <div className="app">
-      <h1>Sodium Sidekick 🧂</h1>
-      <p>Track your salty snacks — don’t flood the beach!</p>
+      <h1>Sodium Tracker</h1>
+      <p>Fill up the sandbox, but don't let it spill over!</p>
 
       <form onSubmit={handleSubmit}>
         <input
