@@ -1,6 +1,7 @@
 # Salt Island
 
-Children with heart conditions often need to monitor and limit their sodium intake. Salt Island is a web app that helps kids understand different levels of daily sodium intake in a fun, interactive way. 
+Children with heart conditions often need to monitor and limit their sodium intake. Salt Island is a web app that helps kids understand different levels of daily sodium intake in a fun, interactive way. Users type in a food name, and the app fetches nutrition data in real time to dynamically update a tree’s coconuts and lean angle.
+
 
 🔗 **Live Demo:** https://sodium-tracker.vercel.app
 
@@ -8,12 +9,10 @@ Children with heart conditions often need to monitor and limit their sodium inta
 ## Goal
 Salt Island demonstrates the sodium content of foods visually, through a leaning coconut tree: 
 
-- Each food added places a coconut in the tree
+- Each food added puts a coconut in the tree
 - Coconut size reflects how much sodium the food contains
 - As total sodium increases, the tree leans further
 - At the sodium limit (default 2,000 mg), the tree falls over with a 'crash' animation
-
-Users type in a food name, and the app fetches nutrition data in real time to dynamically update the tree’s coconuts and lean angle.
 
 ## API Used
 **Open Food Facts API**  
