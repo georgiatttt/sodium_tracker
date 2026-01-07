@@ -1,45 +1,59 @@
-# Sodium Sidekick 🧂
+# Salt Island
 
-## Problem Statement
-Children with heart conditions often need to carefully limit their daily sodium intake, but most nutrition or health-tracking apps are designed for adults and feel intimidating, text-heavy, or clinical. A kid who just wants to know “how salty was that mac and cheese?” shouldn’t need to wade through dense nutrition tables.  
+Children with heart conditions often need to monitor and limit their sodium intake. Salt Island is a web app that helps kids understand different levels of daily sodium intake in a fun, interactive way. 
 
-**Sodium Sidekick** makes sodium awareness playful and visual: a beach scene where every 1000 mg of sodium becomes a sand pile, starting with a bottle washed up on shore. It turns health tracking into a simple, story-like experience kids can actually enjoy.
+🔗 **Live Demo:** https://sodium-tracker.vercel.app
 
----
 
-## Solution
-The app lets users type in any food (for example, *pretzels* or *tomato soup*). It fetches real nutrition data and displays how much sodium the food contains.  
+## Goal
+Salt Island demonstrates the sodium content of foods visually, through a leaning coconut tree: 
 
-- The **first 1000 mg** fills a **bottle** with sand.  
-- Every **additional 1000 mg** creates a **new sand pile** around the bottle.  
-- A friendly **mermaid 🧜‍♀️** floats nearby as a cheerful visual companion.  
+- Each food added places a coconut in the tree
+- Coconut size reflects how much sodium the food contains
+- As total sodium increases, the tree leans further
+- At the sodium limit (default 2,000 mg), the tree falls over with a 'crash' animation
 
-This playful metaphor helps kids understand sodium limits in a tangible way — seeing when their “beach” starts to overflow encourages healthy choices without scolding.
-
----
+Users type in a food name, and the app fetches nutrition data in real time to dynamically update the tree’s coconuts and lean angle.
 
 ## API Used
-- **API Name:** Open Food Facts API  
-- **API Documentation:** [https://world.openfoodfacts.org/data](https://world.openfoodfacts.org/data)  
-- **How it's used:**  
-  The app sends a query (e.g. “mac and cheese”) to Open Food Facts and retrieves the product’s nutrition data in JSON format. It reads the `sodium_100g` field and converts it to milligrams. This sodium value updates the running total and drives the visual animation of the bottle and sand piles.
+**Open Food Facts API**  
+📄 Documentation: https://world.openfoodfacts.org/data
 
----
+**Usage Details:**
+- The app sends a search query for the entered food
+- Retrieves product data in JSON format
+- Reads the `sodium_100g` field
+- Converts sodium values to milligrams
+- Uses this value to:
+  - Update total sodium
+  - Size each coconut
+  - Control the tree’s lean animation
 
 ## Features
-- 🔍 Search for any food and instantly see its sodium content  
-- 🧴 Visual “bottle + beach” metaphor that fills as sodium increases  
-- 🧜‍♀️ Animated mermaid companion to make tracking fun  
-- 🧂 Automatic running total with clear daily-limit visualization  
-- 🚫 Reset button to start a new day’s tracking  
+- Search for foods and retrieve real nutrition data
+- One coconut per food entry, scaled by sodium content
+- Leaning tree visualization tied to total intake
+- Visual alert when crossing the 2,000 mg daily threshold
+- Running total of daily sodium
+- Reset button to start a new day
 
----
+## Tech Stack
+- **Frontend:** React
+- **Build Tool:** Vite
+- **Language:** JavaScript
+- **Styling:** CSS
+- **Deployment:** Vercel
 
-## Setup Instructions
-1. Clone this repository  
-   ```bash
-   git clone https://github.com/yourusername/sodium-sidekick.git
-   cd sodium-sidekick
+## Author
+Built end-to-end by Georgia Thomas as a personal and portfolio project exploring user-centered design, React state management, animation-driven UI feedback, and frontend deployment.
 
-## Screenshots
-![image](./public/Screenshot%202025-10-26%20at%204.39.45 PM.png)
+## Getting Started (Run Locally)
+
+Clone the repository and start the development server:
+
+```bash
+git clone https://github.com/georgiatttt/sodium_tracker.git
+cd sodium_tracker
+npm install
+npm run dev
+
