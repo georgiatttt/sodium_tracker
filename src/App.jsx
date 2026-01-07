@@ -138,7 +138,7 @@ export default function App() {
 
       {/* App UI */}
       <div className="app">
-        <h1>Sodium Tracker</h1>
+        <h1>Salt Island</h1>
         <p>How much sodium does it take to tip the tree?</p>
 
         <form onSubmit={handleSubmit}>
